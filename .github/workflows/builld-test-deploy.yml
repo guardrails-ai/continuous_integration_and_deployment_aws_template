@@ -30,8 +30,8 @@ jobs:
             - name: Build Docker image
               uses: docker/build-push-action@v6
               with:
-                context: guard
-                file: guard/Dockerfile
+                context: guardrails
+                file: guardrails/Dockerfile
                 platforms: linux/amd64
                 push: false
                 tags: gr-backend-images:${{ github.sha }}
