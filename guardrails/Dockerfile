@@ -28,10 +28,10 @@ RUN pip install $GUARDRAILS_SDK_VERSION "gunicorn"
 RUN guardrails configure --enable-metrics --enable-remote-inferencing --token $GUARDRAILS_TOKEN
 
 # bring in base template
-COPY guardrails/chatbot.json /app/chatbot.json
+COPY chatbot.json /app/chatbot.json
 
 # un comment this and comment out the RUN guardrails create if using a customized config.py
-# COPY guardrails/config.py
+# COPY config.py
 
 # Install Hub Deps and create config.py
 RUN guardrails create --template /app/chatbot.json
