@@ -121,7 +121,7 @@ jobs:
                 echo "something like docker push ${YOUR_AWS_ACCOUNT_ID}.dkr.ecr.${YOUR_AWS_REGION}.amazonaws.com/gr-backend-images:latest"
             - name: Deploy to production
               run: |
-	              echo "Deploying to production. This is typically a ecs update for aws."
-	              echo "along the lines of `aws ecs update-service --cluster ${{ env.AWS_ECS_CLUSTER_NAME }} --service ${{ env.AWS_ECS_SERVICE_NAME }} --desired-count ${{ env.AWS_ECS_DESIRED_TASK_COUNT }} --force-new-deployment`"
-			        env:
-			          AWS_DEFAULT_REGION: ${{ env.AWS_REGION }}
+                echo "Deploying to production. This is typically a ecs update for aws."
+                echo "like `aws ecs update-service --cluster ${{ env.AWS_ECS_CLUSTER_NAME }} --service ${{ env.AWS_ECS_SERVICE_NAME }} --desired-count ${{ env.AWS_ECS_DESIRED_TASK_COUNT }} --force-new-deployment`"
+              env:
+                AWS_DEFAULT_REGION: ${{ env.AWS_REGION }}
