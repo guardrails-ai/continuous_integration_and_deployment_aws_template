@@ -91,7 +91,7 @@ jobs:
             - name: Run Pytest
               run: |
                 pip install pytest openai guardrails-ai
-                pytest guard/tests
+                pytest guardrails/tests
                 docker stop guardrails-container
                 docker rm guardrails-container
 
